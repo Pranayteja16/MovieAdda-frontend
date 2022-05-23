@@ -1,0 +1,70 @@
+<div class="screen">
+
+<div class="card">
+    <h1>Add Show</h1>
+<form [formGroup]="locationform" (change)="onlocation()">
+    <div>
+        <label for="location">Location:</label>
+        <select id="location"  formControlName="location"  class="inp">
+            <option value="" disabled>Select Location</option>
+            <option *ngFor="let item of locations_list">{{item}}</option>
+            </select><br>
+    </div>
+</form>
+
+<form [formGroup]="movieform" (change)="onmovie()">
+    <div>
+        <label for="movie">Movie:</label>
+        <select id="movie"  formControlName="movie"  class="inp">
+            <option value="" disabled>Select Movie</option>
+            <option *ngFor="let item of movies_list">{{item}}</option>
+            </select><br>
+    </div>
+</form>
+
+<form [formGroup]="showtimeform" >
+    <div>
+        <label for="Theater">Theater:</label>
+        <select id="Theater"  formControlName="theater"  class="inp">
+            <option value="" disabled>Select Theater</option>
+            <option *ngFor="let item of theaters_list">{{item}}</option>
+            </select><br>
+
+            <!-- <label for="movie">Selected Movie:</label>
+            <input  type="text" formControlName="movie" name="movie" ><br> -->
+         
+
+            <label for="showtiming">Showtime:</label>
+            <input  type="text" formControlName="showtiming" placeholder="Enter Showtime" name="showtiming" required>
+            <span class="validation" *ngIf="showtiming && showtiming .invalid && showtiming .touched">Enter a valid Location</span><br>
+            <button type="submit" [disabled]="showtimeform.invalid" class="button" (click)="onshowtime()">Select</button> 
+    </div>
+</form>
+</div>
+<div class="row" *ngIf="shows.length>0; else elseblock">
+    <div class="column" *ngFor="let item of shows" >
+       
+      <div class="card1">
+            <tr >
+        <td >
+          <h3 style="color:#dd0b40">Location:<span style="color: #dd0b40;">{{item.location}}</span></h3>
+        </td>
+        <td>
+            <h3 style="color:#dd0b40">Movie:<span style="color: #dd0b40;">{{item.movie}}</span></h3>
+          </td>
+          <td >
+            <h3 style="color:#dd0b40">Theater:<span style="color: #dd0b40;">{{item.theater}}</span></h3>
+          </td>
+          <td >
+            <h3 style="color:#dd0b40">ShowTiming:<span style="color: #dd0b40;">{{item.showtiming}}</span></h3>
+          </td>
+            <button type="submit" class="button1" (click)="ondelete(item.location,item.movie,item.theater,item.showtiming)">Delete</button>
+        </tr>
+        </div>
+  </div>
+  </div>
+  <ng-template #elseblock >
+    <h1 style="text-align: center; color:red;margin-top: 530px;margin-right: 50px;">No Theaters Found</h1>
+  </ng-template>
+
+</div>

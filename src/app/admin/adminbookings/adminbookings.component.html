@@ -1,0 +1,40 @@
+<!-- <h1>All Bookings shown here</h1> -->
+<div class="row" *ngIf="reservations.length>0; else elseblock">
+    <div class="column" *ngFor="let item of reservations" >
+      <div class="card">
+            <tr>
+        <td>
+          <h3 style="color:rgb(209, 141, 141)">Name: <span style="color: rgb(209, 141, 141);">{{item.name}}</span></h3>
+        </td>
+        <td>
+          <h3 style="color:rgb(209, 141, 141)">Email: <span style="color: rgb(209, 141, 141);">{{item.email}}</span></h3>
+        </td>
+        <td>
+            <h3 style="color:rgb(209, 141, 141)">Movie: <span style="color: rgb(209, 141, 141);">{{item.movie}}</span></h3>
+          </td>
+          <td>
+            <h3 style="color:rgb(209, 141, 141)">Theater: <span style="color: rgb(209, 141, 141);">{{item.theater}}</span></h3>
+          </td>
+        </tr>
+        <tr >
+            <td>
+                <h3 style="color:rgb(209, 141, 141)">Location: <span style="color: rgb(209, 141, 141);">{{item.location}}</span></h3>
+              </td>
+          <td>
+            <h3 style="color:rgb(209, 141, 141)">ShowTime: <span style="color: rgb(209, 141, 141);">{{item.showtiming}}</span></h3>
+          </td>
+            <td>
+          <h3 style="color:rgb(209, 141, 141)">Seats_Booked: <span style="color: rgb(209, 141, 141);">{{item.seats}}</span></h3>
+        </td>
+        <td>
+          <h3 style="color:rgb(209, 141, 141)">Total_Amount : <span style="color: rgb(209, 141, 141);">{{item.totalamount}}</span></h3>
+        </td>
+        <button type="submit" class="button1" (click)="ondelete(item.location,item.movie,item.theater,item.showtiming,item.seats)">Delete</button>
+        </tr>
+        </div>
+  </div>
+  </div>
+  <ng-template #elseblock >
+    <h1 style="text-align: center; color:red">No Bookings Found</h1>
+  </ng-template>
+

@@ -1,0 +1,151 @@
+.screen{
+  width: 208vh;
+  padding-top: 50px;
+  height: 750px; 
+  background-color: #7b4397; 
+  background-image: linear-gradient(to right, #7b4397 , #dc2430);
+}
+.card{
+  border: none;
+  border-radius:3%;
+width: 350px;
+  height:400px;
+  position:absolute;
+  padding: 20px;
+  top:15%;
+  left: 500px;
+  padding-top: 50px;
+background-color:rgba(0, 0, 0, 0.712);
+}
+
+input{
+    position: relative;
+    padding:5px;
+    display:grid;
+    text-align: center;
+    height:25px;
+    width: 250px;
+    left:30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    top:-35px;
+}
+label{
+    color: rgba(155, 218, 39, 0.329);
+    position: relative;
+    padding:5px;    
+    display:grid;
+    left: 30px;
+    top:-35px;
+    font-size: 20px;
+}
+select{
+    position: relative;
+    padding:3px;
+    display:grid;
+    text-align: center;
+    height:25px;
+    width: 250px;
+    left:30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    top:-30px;
+}
+/* .button{
+    position: relative;
+    padding:5px;
+    top: 10px;
+    height:25px;
+    width: 70px;
+    left: 30px;
+    border-radius: 5px;
+    outline: none;
+    top:-25px;
+} */
+.button{
+    cursor: pointer;
+    width: 30%;
+    border: none;
+    border-radius:5px;
+    background: white;
+    color: black;
+    position:relative;
+    top:-25px;
+    left:30px;
+    padding: 10px;
+    font-size: 15px;
+  }
+.button:hover {
+background: #dd0b40;
+}
+  
+.button1{
+    cursor: pointer;
+    width: 30%;
+    border: none;
+    border-radius:5px;
+    height: 35px;
+    width:80px;
+    background: white;
+    color: black;
+    margin-left: 30px;
+    padding: 10px;
+    font-size: 15px;
+  }
+.button1:hover {
+background: #dd0b40;
+}
+h1{
+  position: relative;
+  top:-20px;
+  left:30px;
+  color:#dd0b40;
+  padding-left: 50px;
+}
+.validation{
+    position: relative;
+    padding:5px;
+    left: 30px;
+    top:-30px;
+    color:red;
+}
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+
+
+
+.card1 {
+    background-color: rgba(0, 0, 0, 0.76);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 2px 16px;
+  }
+  
+  .card1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+.row{
+  position: relative;
+  top:400px;
+  left:200px;
+}
+ td{
+   width: 350px;
+ }
+  .column {
+    width:60%;
+    padding: 0 2px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-top: 10px;
+  }
+
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+ 

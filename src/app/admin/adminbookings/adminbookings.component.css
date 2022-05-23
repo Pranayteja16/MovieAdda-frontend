@@ -1,0 +1,57 @@
+
+.button1{
+    cursor: pointer;
+    width: 30%;
+    border: none;
+    border-radius:5px;
+    height: 35px;
+    width:80px;
+    background: white;
+    color: black;
+    margin-left: 30px;
+    padding: 10px;
+    font-size: 15px;
+  }
+.button1:hover {
+background: #fa255e;
+}
+  .card {
+    border-radius: 10px;
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 2px 16px;
+   
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+ td{
+   width: 350px;
+ }
+  .column {
+    width:90%;
+    padding: 0 2px;
+    margin-bottom: 10px;
+    margin-left: 4%;
+    margin-top: 10px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* h1{
+    color: white;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  padding-bottom: 420px;
+  color: #fa255e;
+  font-family:Brush Script MT, Brush Script Std, cursive ;
+  
+
+} */

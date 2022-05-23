@@ -1,0 +1,62 @@
+<div class="wrapper">    
+    <div class="block">
+<form [formGroup]="signupform">
+    
+            
+            <h2>Register</h2>
+
+            <input class="inp" type="text" formControlName="name" placeholder="Enter Name" pattern="[a-zA-z]+$" minlength="6" name="name"  required > 
+            <span class="validation" *ngIf=" name &&name.invalid && name.touched">Enter a valid Name</span><br>
+        
+            <input class="inp" type="text" formControlName="phoneno"  placeholder="Enter PhoneNo" pattern="^((\\+91-?)|0)?[0-9]{10}$"  name="phoneno"  required>
+            <span class="validation" *ngIf=" phoneno && phoneno.invalid && phoneno.touched">Enter a valid Phoneno</span><br>
+           
+       
+            <input  class="inp" formControlName="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="text" placeholder="Enter Email" name="email" required >
+            <span class="validation" *ngIf="email && email.invalid && email.touched">Enter a valid Email</span><br>
+
+            
+            <input  class="inp" formControlName="password" type="password" pattern='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$' placeholder="Enter Password" name="password" required>
+            <span class="validation" *ngIf="password && password.invalid && password.touched">Enter a valid Password with minlength 5</span><br>
+            <div class="btns">
+            <button [disabled]="signupform.invalid" type="submit" class="button" (click)="signup()">Signup</button> 
+
+            </div>
+        </form>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+<!-- <form  [formGroup]="usersignupform">
+    <div class="card">
+            
+            <h1>Signup</h1>
+
+            <label for="name"><b>Name</b></label> 
+            <input type="text" #name="ngModel" placeholder="Enter Name" pattern="[a-zA-z]+$" minlength="6" name="name"  required > 
+            <span class="validation" *ngIf="name.invalid && name.touched">Enter a valid Name</span><br>
+        
+            <label for="phoneno"><b>PhoneNo</b></label> 
+            <input type="text" #phoneno="ngModel"  placeholder="Enter PhoneNo" pattern="^((\\+91-?)|0)?[0-9]{10}$"  name="phoneno" ngModel required>
+            <span class="validation" *ngIf="phoneno.invalid && phoneno.touched">Enter a valid Phoneno</span><br>
+           
+            <label for="email"><b>Email</b></label> 
+            <input  #email="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="text" placeholder="Enter Email" name="email" ngModel required >
+            <span class="validation" *ngIf="email.invalid && email.touched">Enter a valid Email</span><br>
+
+            <label for="password"><b>Password</b></label> 
+            <input  #password="ngModel" type="password" pattern='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$' placeholder="Enter Password" name="password" ngModel required>
+            <span class="validation" *ngIf="password.invalid && password.touched">Enter a valid Password with minlength 5</span><br>
+
+            <button [disabled]="signinform.invalid" type="submit" class="button" (click)="signup(signupform.value)">Signup</button> 
+
+
+    </div>
+</form> -->

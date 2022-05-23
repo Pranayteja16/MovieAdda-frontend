@@ -1,0 +1,37 @@
+<div class="screen">
+<form [formGroup]="movieform">
+    <div class="card">
+        <h1>Add Movie</h1>
+        <label for="Location">Location:</label>
+        <select id="Location"  formControlName="location"  class="inp">
+            <option value="" disabled>Select Location</option>
+            <option *ngFor="let item of locations_list">{{item}}</option>
+            </select><br>
+            <label for="movie">Movie:</label>
+            <input  type="text" formControlName="title" placeholder="Enter Movie" name="movie" required>
+            <span class="validation" *ngIf="title && title .invalid && title .touched">Enter a valid Location</span><br>
+            <label for="movie">Image url:</label>
+            <input  type="text" formControlName="image" placeholder="Enter image url" name="image"><br>
+            <button class="button" [disabled]="movieform.invalid" type="submit" (click)="onmovie()">Select</button> 
+        </div>
+</form>
+<div class="row" *ngIf="movies.length>0; else elseblock">
+    <div class="column" *ngFor="let item of movies" >
+       
+      <div class="card1">
+            <tr >
+        <td >
+          <h3 style="color:#dd0b40">Location:<span style="color: #dd0b40;">{{item.location}}</span></h3>
+        </td>
+        <td >
+            <h3 style="color:#dd0b40">Movie:<span style="color: #dd0b40;">{{item.title}}</span></h3>
+          </td>
+            <button  type="submit" class="button1" (click)="ondelete(item.location,item.title)">Delete</button>
+        </tr>
+        </div>
+  </div>
+  </div>
+  <ng-template #elseblock >
+    <h1 style="text-align: center; color:red;margin-top: 530px;margin-right: 50px;">No Movies Found</h1>
+  </ng-template>
+</div>

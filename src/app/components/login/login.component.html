@@ -1,0 +1,28 @@
+
+
+
+
+<!-- <div class="container1">
+    <img id=image src="https://images.adsttc.com/media/images/5f7d/fef2/63c0/170a/9100/0273/large_jpg/Jiangnan_Photography.jpg?1602092773">
+    </div> -->
+<div class="wrapper">
+    <div class="block">
+    <form [formGroup]="loginform">
+    
+        <h2>Login </h2>
+        
+            <input class="inp" type="text" formControlName="email" placeholder="Enter Email" name="email" required>
+            <span class="validation" *ngIf="email && email.invalid && email.touched">Enter a valid Email</span><br>
+
+            
+            <input  class="inp" type="password" formControlName="password" placeholder="Enter Password" name="password" required>
+            <span class="validation" *ngIf="password && password.invalid && password.touched">Enter a valid Password</span><br>
+            
+            
+            <div class="btns">
+            <button [disabled]="loginform.invalid" type="submit" (click)="login()">Login</button> 
+            <button type="submit" (click)="signup()">Signup</button>
+            </div>
+    </form>
+    </div>
+    </div>

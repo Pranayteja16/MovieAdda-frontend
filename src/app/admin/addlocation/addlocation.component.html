@@ -1,0 +1,33 @@
+<div class="screen">
+<form [formGroup]="addlocationform">
+    <div class="card">
+            
+            <h1>Add Location</h1>
+
+            <label for="name"><b>Location</b></label> 
+            <input type="text" formControlName="location" placeholder="Enter location" pattern="[a-zA-z]+$"  name="location"  required > 
+            <span class="validation" *ngIf=" location && location.invalid && location.touched">Enter a valid location</span><br>
+            <!-- <label for="movie">Image url:</label>
+            <input  type="text" formControlName="image" placeholder="Enter image url" name="image"><br> -->
+            <button [disabled]="addlocationform.invalid" type="submit" class="button" (click)="addlocation()">Submit</button> 
+    </div>
+</form>
+
+<div class="row" *ngIf="locations.length>0; else elseblock">
+    <div class="column" *ngFor="let item of locations" >
+       
+      <div class="card1">
+            <tr >
+        <td >
+          <h3 style="color:#dd0b40">Location:<span style="color: #dd0b40;">{{item.location}}</span></h3>
+        </td>
+            <button type="submit" class="button1" (click)="ondelete(item.location)">Delete</button>
+        </tr>
+        </div>
+  </div>
+  </div>
+    <ng-template #elseblock >
+    <h1 style="text-align: center; color:red;margin-top: 530px;margin-right: 50px;">No Locations Found</h1>
+  </ng-template>
+
+</div>

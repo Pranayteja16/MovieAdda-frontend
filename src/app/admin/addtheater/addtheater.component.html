@@ -1,0 +1,53 @@
+<div class="screen">
+<div class="card">
+    <h1>Add Theater</h1>
+<form [formGroup]="locationform" (change)="onlocation()">
+    <div>
+        <label for="location">Location:</label>
+        <select id="location"  formControlName="location"  class="inp">
+            <option value="" disabled>Select Location</option>
+            <option *ngFor="let item of locations_list">{{item}}</option>
+            </select><br>
+    </div>
+</form>
+
+<form [formGroup]="theaterform" >
+    <div>
+        <label for="movie">Movie:</label>
+        <select id="movie"  formControlName="title"  class="inp">
+            <option disabled>Select Movie</option>
+            <option *ngFor="let item of movies_list">{{item}}</option>
+            </select><br>
+            <label for="theater">Theater:</label>
+            <input  type="text" formControlName="theater" placeholder="Enter Movie" name="theater" required>
+            <span class="validation" *ngIf="theater && theater .invalid && theater .touched">Enter a valid Location</span><br>
+            <!-- <label for="image">Image address:</label>
+            <input  type="text" formControlName="image" placeholder="Enter Image Address" name="image"><br> -->
+            <button class="button" [disabled]="theaterform.invalid" type="submit" (click)="ontheater()">Select</button> 
+    </div>
+</form>
+</div>
+
+<div class="row" *ngIf="theaters.length>0; else elseblock">
+    <div class="column" *ngFor="let item of theaters" >
+       
+      <div class="card1">
+            <tr >
+        <td >
+          <h3 style="color:#dd0b40">Location:<span style="color: #dd0b40;">{{item.location}}</span></h3>
+        </td>
+        <td>
+            <h3 style="color:#dd0b40">Movie:<span style="color: #dd0b40;">{{item.title}}</span></h3>
+          </td>
+          <td >
+            <h3 style="color:#dd0b40">Theater:<span style="color: #dd0b40;">{{item.theater}}</span></h3>
+          </td>
+            <button type="submit" class="button1" (click)="ondelete(item.location,item.title,item.theater)">Delete</button>
+        </tr>
+        </div>
+  </div>
+  </div>
+  <ng-template #elseblock >
+    <h1 style="text-align: center; color:red;margin-top: 530px;margin-right: 50px;">No Theaters Found</h1>
+  </ng-template>
+</div>

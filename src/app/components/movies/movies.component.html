@@ -1,0 +1,23 @@
+
+<div class="wrapper">
+    <div class="container">
+    <ul *ngFor="let item of images_list">
+        <div><img id="image1" src="{{item}}"  (click)="onimage(item)" ></div>
+    </ul>
+    </div>
+   
+
+    <div class="card">
+    <tr>
+        <td>
+        <h3 style="color:white">Location: <span style="color: white;">{{location_selected}}</span></h3>
+      </td>
+      <td>
+        <h3 style="color:white">Movie: <span style="color: white;">{{movie}}</span></h3>
+      </td>
+      <td> <button  type="submit" class="button1" (click)="onselect()">Select-Theater</button>
+       
+      </td>
+    </tr>
+  </div>
+</div>

@@ -1,0 +1,168 @@
+/* 
+.loc{
+    border: none;
+    border-radius:5px;
+    width: 350px;
+    height:150px;
+    position:absolute;
+    padding: 20px;
+    top:13%;
+    background: hsla(205, 46%, 50%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 14%, 1) 100%);
+    /* background-color: rgb(12, 172, 221); */
+    /* text-align: left;
+    left:50px;
+}
+.loc {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 2px 16px;
+  }
+  
+  .loc:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+
+button{
+    cursor: pointer;
+    width: 30%;
+    border: none;
+    border-radius:5px;
+    background: rgb(23, 209, 162);
+    color: white;
+    position:relative;
+    top:15px;
+    left:30px;
+    padding: 10px;
+    font-size: 15px;
+  }
+button:hover {
+background: rgb(160, 180, 187);
+}
+  
+select{
+    position: relative;
+    padding:5px;
+    display:grid;
+    text-align: center;
+    height:30px;
+    width: 250px;
+    left:30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    top:13px;
+}
+option{
+    background-color: white;
+}
+label{
+    color:aqua;
+    position: relative;
+    padding:5px;
+    display:grid;
+    left: 30px;
+    top:8px;
+    font-size: 20px;
+}
+
+ .container{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+}
+.image1{
+    cursor:pointer;
+    position: relative;
+    top:170%;
+    width:240px;
+    padding: 5px;
+    border-radius: 15px;
+}
+.image1:hover {
+    width:245px;
+    }
+.image1:hover {
+    box-shadow: 0 8px 16px 0 rgba(22, 22, 22, 0.849)
+        }  */
+
+        .wrapper{
+            background-image:url("moviehome.jpg"); 
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+           min-height: 550px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+            flex-direction: column;
+            padding: 30px;
+          }
+          
+          button{
+            
+          background: reverse;
+          color: black;
+          padding: 10px 15px;
+          font-size: 15px;
+          width: 150px;
+          text-align: center;
+          margin:0 25px;
+          
+          }
+          button:disabled{
+          background: gray;
+          color:black;
+          }
+          .block button:hover, button:hover{
+            background-color: #dd0b40;
+            /* color:rgba(206, 200, 19, 0.76); */
+          }
+          
+          
+          /* a */
+          
+          .block{
+            width: 320px;
+            padding: 40px;
+            
+            background-color: black;
+            height: fit-content;
+            border-radius: 15px;
+          }
+          .validation{
+              color:#fa255e ;
+          }
+          h1{
+            color: #fa255e;
+            margin: 0px;
+            padding: 10px;
+          }
+          form{
+          width: 95%;
+          /* margin: 5px; */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          }
+          h2{
+            font-size:30px;
+            color: #fa255e;
+            padding-bottom: 10px;
+          /* color: black; */
+          font-weight: 500;
+          font-family: 'Oleo Script Swash Caps', cursive;
+          }
+              .inp{
+                padding: 10px 10px;
+                margin: 10px;
+                width: 80%;
+               
+              }
+              .btns{
+                padding: 10px;
+                  display: flex;
+                  width: 100%;
+              }
+             

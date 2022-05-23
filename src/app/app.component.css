@@ -1,0 +1,56 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+    *{
+        font-family: 'Oleo Script Swash Caps', cursive;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 8vh;
+    
+        background-color: rgb(110, 31, 35);
+      
+        font-weight: 600;
+
+      font-size: 18px;
+
+    }
+    .logo a{
+        color: rgb(241, 233, 239);
+    
+        letter-spacing: 3px;
+        font-size: 30px;
+        text-decoration: none;
+        margin-left:0px;
+        padding-left:0px;
+        
+    }
+
+    .nav-links{
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+       
+    }
+  
+    .nav-links li{
+        list-style: none;
+    }
+    .nav-links a,button{
+    
+        color: rgb(209, 141, 141);
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+       }
+    
+    .nav-links li a:hover, button:hover{
+        color: #dd0b40;
+    
+    }
+    

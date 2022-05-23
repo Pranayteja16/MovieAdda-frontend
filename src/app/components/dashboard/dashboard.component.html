@@ -1,0 +1,21 @@
+
+<div class="wrapper">
+    <div class="block">
+<form [formGroup]="locationform">
+    <div class="loc">
+        <h2>Choose Location</h2>
+        <select id="location"  formControlName="location"  class="inp" >
+            <option value="" disabled>Choose Location</option>
+            <option *ngFor="let item of locations_list">{{item}}</option>
+            </select><br>
+            <button type="submit" (click)="onlocation()">Select</button> 
+        </div>
+    </form>
+    </div>
+</div>
+    <!-- <div class="container">
+     <ul *ngFor="let item of image_list">
+        <img class =image1 src="{{item}}" (click)="onimage(item)">
+    </ul>
+    </div> -->
+  
