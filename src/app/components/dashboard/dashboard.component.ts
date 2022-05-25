@@ -47,27 +47,6 @@ export class DashboardComponent implements OnInit {
     })
 
   }
-
-
-  onimage(str:any){
-    console.log(str)
-    const imagejson={
-      image:str
-    }
-    console.log(imagejson)
-    this.bookingservice.getlocationbyimage(imagejson).subscribe({next:(res:any) =>{ 
-      console.log(res)
-      for(let item of res){
-        // this.bookingservice.setlocation(item.location)
-        localStorage.setItem('location',item.location)
-      }
-      this.router.navigate(['/movies'])
-    },error:(err)=>{
-      console.log("Error Occured")
-      alert("Error Occured")
-    }
-    })
-  }
   ngOnInit(): void {
     this.bookingservice.getalllocations().subscribe({next:(res:any) =>{
       console.log(res)

@@ -11,9 +11,7 @@ export class AdminService {
   allusers(){
     return this.http.get('http://localhost:9000/users/allusers')
   }
-  updateuserrole(email:any,userdata:any){
-    return this.http.put('http://localhost:9000/users/updateuserrole/'+email,userdata)
-  }
+ 
   deleteuser(email:any){
     return this.http.delete('http://localhost:9000/users/deleteuser/'+email )
   }

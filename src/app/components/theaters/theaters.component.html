@@ -7,15 +7,7 @@
             <option value="" disabled>Choose Theater</option>
             <option *ngFor="let item of theaters_list">{{item}}</option>
             </select><br>
-            <!-- <input  type="text" formControlName="theater" placeholder="Enter Movie" name="movie" required>
-            <span class="validation" *ngIf="theater && theater .invalid && theater .touched">Enter a valid Location</span><br> -->
-            <!-- <button type="submit" (click)="ontheater()">Select</button>
-            <ul *ngFor="let item of shows_list">
-                <li>show_timing: {{item}}</li>
-                <li>Movie: {{movie_selected}}</li>
-                <li>Theater: {{theater_selected}}</li>
-                <br>
-            </ul>  -->
+            
         </div>
     </form>
     <form [formGroup]="showsform" (change)="onshows()">
@@ -32,31 +24,5 @@
     </td>
 </div>
 </div>
-    <!-- <div class="container">
-        <ul *ngFor="let item of images_list">
-            <div><img id="image1" src="{{item}}"  (click)="onimage(item)" ></div>
-        </ul>
-    </div> -->
-
-    
-
-      <!-- <div class="card">
-            <tr> -->
-            <!-- <td>
-            <h3 style="color:white">Location: <span style="color: white;">{{location_selected}}</span></h3>
-          </td>
-          <td>
-            <h3 style="color:white">Movie: <span style="color: white;">{{movie_selected}}</span></h3>
-          </td>
-        </tr>
-        <tr>
-            <td>
-            <h3 style="color:white">Theater: <span style="color: white;">{{theater_selected}}</span></h3>
-          </td>
-          <td>
-            <h3 style="color:white">Show_time: <span style="color: white;">{{showtiming_selected}}</span></h3>
-          </td> -->
-          
-        <!-- </tr>
-      </div> -->
+ 
 

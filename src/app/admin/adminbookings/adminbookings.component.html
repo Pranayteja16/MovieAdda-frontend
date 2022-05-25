@@ -1,4 +1,4 @@
-<!-- <h1>All Bookings shown here</h1> -->
+<div class="screen">
 <div class="row" *ngIf="reservations.length>0; else elseblock">
     <div class="column" *ngFor="let item of reservations" >
       <div class="card">
@@ -29,7 +29,7 @@
         <td>
           <h3 style="color:rgb(209, 141, 141)">Total_Amount : <span style="color: rgb(209, 141, 141);">{{item.totalamount}}</span></h3>
         </td>
-        <button type="submit" class="button1" (click)="ondelete(item.location,item.movie,item.theater,item.showtiming,item.seats)">Delete</button>
+        <!-- <button type="submit" class="button1" (click)="ondelete(item.location,item.movie,item.theater,item.showtiming,item.seats)">Delete</button> -->
         </tr>
         </div>
   </div>
@@ -37,4 +37,4 @@
   <ng-template #elseblock >
     <h1 style="text-align: center; color:red">No Bookings Found</h1>
   </ng-template>
-
+</div>

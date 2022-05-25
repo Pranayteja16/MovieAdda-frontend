@@ -1,4 +1,10 @@
-
+.screen{
+  padding-top: 50px;
+  width: 100vw;
+  min-height: 1000px;
+  background-color: #7b4397; 
+  background-image: linear-gradient(to right, #7b4397 , #dc2430);
+}
 .button1{
     cursor: pointer;
     width: 30%;

@@ -5,8 +5,10 @@
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   min-height: 550px;
-   width: 194vh;
+   min-height: 550px; 
+   
+   width: 96vw;
+            /* height: 220vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,3 +48,16 @@
   
 
 }
+@media (max-width:800px)
+      {
+        .wrapper
+        {
+          width: 88vw;
+          height: 120vh;
+          }
+          h1{
+            padding-top: 150px;
+            font-size: 250%;
+          }
+    }
+  

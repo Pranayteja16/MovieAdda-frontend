@@ -4,7 +4,7 @@
  background-repeat: no-repeat;
  background-size: cover;
  min-height: 600px;
-width: 203vh;
+width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,13 +99,13 @@ label{
 margin-left: 1px;
 margin-top: 50px;
     border-radius:5px;
-    width: 650px;
+    width: 50vw;
     height:130px;
     position:absolute;
 
     padding: 20px;
     top:13%;
-    left:500px;
+    
     text-align: left;
     align-items: center
     ;
@@ -132,9 +132,17 @@ margin-top: 50px;
   * {
     box-sizing: border-box;
   }
-  @media only screen and (max-width: 620px) {
-    /* For mobile phones: */
-    .card, .container {
-      width: 100%;
-    }
+  @media (max-width:800px)
+  {
+    .card
+    {
+      width: 80vw;
+      }
+      
+  .container{
+    width: 100vw;
+        height: 120vh;
+  
+  } 
+
   }

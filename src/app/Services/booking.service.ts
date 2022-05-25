@@ -22,9 +22,7 @@ getalllocations(){
 searchlocation(userdata:any){
   return this.http.post('http://localhost:9000/location/searchlocation' , userdata)
 }
-getlocationbyimage(image:any){
-  return this.http.post('http://localhost:9000/location/getlocationbyimage', image)
-}
+
 searchmovie(userdata:any){
   return this.http.post('http://localhost:9000/movie/searchmovie', userdata)
 }
@@ -39,9 +37,7 @@ getmovies(location:any){
 searchtheater(userdata:any){
   return this.http.post('http://localhost:9000/theater/searchtheater' , userdata)
 }
-gettheaterbyimage(image:any){
-  return this.http.post('http://localhost:9000/theater/gettheaterbyimage', image)
-}
+
 gettheaters(movie:any, location:any){
   return this.http.get('http://localhost:9000/theater/gettheater/'+ movie+'/'+location)
 }
@@ -63,9 +59,6 @@ bookseats(userdata:any){
 }
 getreservationdetails(id:any){
   return this.http.get('http://localhost:9000/reservation/getreservationdetails/'+ id)
-}
-updatereservation(id:any,userdata:any){
-  return this.http.put('http://localhost:9000/reservation/updatereservationdetails/'+ id, userdata)
 }
 getreservations(email:any){
   return this.http.get('http://localhost:9000/reservation/getreservationbyemail/'+ email)

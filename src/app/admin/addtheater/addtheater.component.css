@@ -1,7 +1,7 @@
 .screen{
-  width: 208vh;
   padding-top: 50px;
-  height: 750px; 
+  width: 100vw;
+  min-height: 1000px;
   background-color: #7b4397; 
   background-image: linear-gradient(to right, #7b4397 , #dc2430);
 }
@@ -130,7 +130,7 @@ input.ng-invalid.ng-touched{
 .row{
   position: relative;
   top:400px;
-  left:200px;
+  /* left:200px; */
 }
  td{
    width: 350px;
@@ -148,4 +148,21 @@ input.ng-invalid.ng-touched{
     box-sizing: border-box;
   }
   
- 
+  @media (max-width:800px)
+  {
+    .screen
+    {
+      width: 100vw;
+      height: 150vh;
+      }
+      .card{
+        width: 80vw;
+        left: 70px;
+      }
+      .card1{
+        width: 80vw;
+        left: 70px;
+      }
+
+
+  }

@@ -59,52 +59,20 @@ ontheater(){
     }
   })
 }
-onimage(str:any){
-  console.log(str)
-  const imagejson={
-    image:str
-  }
-  console.log(imagejson)
-  this.bookingservice.gettheaterbyimage(imagejson).subscribe({next:(res:any) =>{ 
-    console.log(res)
-    for(let item of res){
-      this.theater_selected=item.theater
-      localStorage.setItem('theater',item.theater)
-      // this.bookingservice.settheater(item.theater)
-    }
 
-  this.bookingservice.getshows(localStorage.getItem('theater') , localStorage.getItem('movie'), localStorage.getItem('location'))
-  .subscribe({next:(response:any) =>{
-    this.shows_list=[]
-    console.log(response)
-    for(let item of response){
-      this.shows_list.push(item.showtiming)
-    }
-  }
-})
-},error:(err)=>{
-  console.log("Error Occured")
-  alert("Error Occured")
-}
-})
-}
 
 onshows(){
-  // const details={
-  //   "movie" : this.bookingservice.getmovie(),
-  //   "theater" : this.bookingservice.gettheater(),
-  //   "showtiming" : this.showsform.value.showtiming()
-  // }
+ 
   this.bookingservice.getshow(localStorage.getItem('movie') , localStorage.getItem('theater'), localStorage.getItem('location'),this.showsform.value.showtiming)
   .subscribe({next:(res:any)=>{
     this.showtiming_selected=this.showsform.value.showtiming
     for(let item of res){
     localStorage.setItem('showid',item._id)
-    // this.bookingservice.setshowid(item._id)
+    
     console.log(res)
     console.log(this.bookingservice.getshowid())
     }
-    // this.router.navigate(['/seatlayout'])
+   
   }})
 }
 

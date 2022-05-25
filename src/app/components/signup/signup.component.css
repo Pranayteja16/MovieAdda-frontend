@@ -6,7 +6,7 @@
    background-repeat: no-repeat;
    background-size: cover;
    min-height: 550px;
-   width: 194vh;
+   width: 96vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,3 +79,14 @@
       .validation{
           color:#fa255e
       }
+      @media (max-width:800px)
+      {
+        .wrapper
+        {
+          width: 88vw;
+          
+          
+    
+    
+      }
+    }

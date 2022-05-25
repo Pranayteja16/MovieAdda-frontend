@@ -5,14 +5,16 @@
    background-repeat: no-repeat;
    background-size: cover;
    min-height: 550px;
-   width: 194vh;
+   width: 96vw;
     display: flex;
     justify-content: center;
     align-items: center;
     height: fit-content;
+  
     flex-direction: column;
     padding: 30px;
   }
+  
   
   button{
     
@@ -79,6 +81,16 @@
           width: 100%;
       }
      
-   
+      @media (max-width:800px)
+      {
+        .wrapper
+        {
+          width: 88vw;
+          
+          
+    
+    
+      }
+    }
   
    

@@ -10,7 +10,7 @@ import { AddmovieComponent } from './addmovie/addmovie.component';
 import { AddshowtimeComponent } from './addshowtime/addshowtime.component';
 import { AddtheaterComponent } from './addtheater/addtheater.component';
 import { AdminbookingsComponent } from './adminbookings/adminbookings.component';
-import { UsersComponent } from './users/users.component';
+
 
 const routes: Routes = [
   {path:'addlocation' ,component:AddlocationComponent,canActivate:[AuthGuard, AdminauthGuard]},
@@ -19,7 +19,6 @@ const routes: Routes = [
   {path:'addshowtime' ,component:AddshowtimeComponent,canActivate:[AuthGuard, AdminauthGuard]},
   {path: 'allbookings' , component:AdminbookingsComponent, canActivate:[AuthGuard, AdminauthGuard]},
   {path: 'adminhome' , component:HomeComponent, canActivate:[AuthGuard, AdminauthGuard]},
-  {path: 'users' , component:UsersComponent, canActivate:[AuthGuard, AdminauthGuard]},
   {path: 'adminlocation' , component:DashboardComponent, canActivate:[AuthGuard, AdminauthGuard]},
   {path: 'adminmybookings' , component:BookingsComponent, canActivate:[AuthGuard, AdminauthGuard]},
 ];

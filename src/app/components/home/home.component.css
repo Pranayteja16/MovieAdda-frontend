@@ -1,7 +1,7 @@
 
       .image{
-        width: 98vw;
-            height: 92vh;
+        width: 100vw;
+            height: 100vh;
       
       }
       .marvel{
@@ -167,3 +167,27 @@
       iframe[sandbox] .read-article{
         display: none;
       }
+      @media (max-width:800px)
+      {
+        .marvel
+        {
+          width: 80vw;
+          }
+          .centered
+          {
+            width: 80vw;
+            margin-top: 250px;
+          }
+          .new{
+            width: 80vw;
+            margin-top: 450px;
+          }
+          
+      .image{
+        width: 100vw;
+            height: 120vh;
+      
+      }
+
+      }
+  

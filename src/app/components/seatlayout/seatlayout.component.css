@@ -1,71 +1,18 @@
-/* 
-.icons{
-    position: relative;
-    left:105px;
-    top:40px;
-}
 .price{
-    background: rgb(25, 53, 214);
+    background: rgb(48, 2, 32);
     border-radius: 3px;
     margin: 10px;
     padding: 10px;
     text-align: center;
     color: white;
     position: relative;
-    left:700px;
-    top:-41px;
+    
+    top:10px;
 }
-table {
-    border: 1px solid;
-    margin: auto;
-    width: 80% ;
-    height: 70% ;
-}
-
-.seat-select {
-    cursor: pointer;
-    background: rgb(226, 224, 224);
-    border-radius: 3px;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    color: grey;
-}
-
-.seat-selected {
-    cursor: pointer;
-    background: rgb(74, 158, 74);
-    color: white;
-    border-radius: 3px;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-}
-
-.seat-disabled {
-    cursor: not-allowed;
-    background: brown;
-    color: white;
-    border-radius: 3px;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-}
-
-#submitButton {
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    font-size: 21px;
-}
-
-
-
- */
  .container-fluid {
-    width: 100%;
+    width: 100vw;
     padding-top: 50px;
-    height: 550px; 
+    height: 650px; 
     background-color: #7b4397; 
     background-image: linear-gradient(to right, #7b4397 , #dc2430);
     

@@ -3,7 +3,8 @@
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
- min-height: 620px;
+ min-height: 45vw;
+   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,3 +51,35 @@
   
 
 }
+@media (max-width:800px)
+  {
+    h1
+    {
+      height: 40vh;
+      width: 60vw;
+      }
+      .wrapper
+      {
+        width:100vw;
+        height: 200vw;
+      }
+  .row{
+    width: 80vw;
+        height: 30vh;
+  
+  } 
+  .card{
+    width: 80vw;
+        height: 30vh;
+  
+  } 
+  td{
+    width: 80vw;
+    
+  }
+  h3{
+    /* height: 10vh; */
+    width: 20vw;
+  }
+
+  }

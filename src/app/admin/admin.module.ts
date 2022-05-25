@@ -9,7 +9,7 @@ import { AddshowtimeComponent } from './addshowtime/addshowtime.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminbookingsComponent } from './adminbookings/adminbookings.component';
-import { UsersComponent } from './users/users.component';
+
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { UsersComponent } from './users/users.component';
     AddtheaterComponent,
     AddshowtimeComponent,
     AdminbookingsComponent,
-    UsersComponent
+    
   ],
   imports: [
     CommonModule,
