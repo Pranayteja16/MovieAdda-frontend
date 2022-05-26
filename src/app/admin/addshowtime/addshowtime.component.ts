@@ -66,8 +66,8 @@ onshowtime(){
     theater: this.showtimeform.value.theater,
     movie: this.movieform.value.movie,
     location: this.locationform.value.location,
-    seats:[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
-    seatsavailable:25,
+    seats:[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],
+    seatsavailable:75,
     ticketprice:100
   }
   this.adminservice.addshowtime(details).subscribe({next:(response:any) =>{ 

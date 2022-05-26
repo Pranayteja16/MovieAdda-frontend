@@ -22,8 +22,8 @@ export class AddtheaterComponent implements OnInit {
   })
   theaterform=new FormGroup({
     title: new FormControl(''),
-    theater: new FormControl(''),
-    image: new FormControl('')
+    theater: new FormControl('')
+    
   })
 
 
@@ -46,7 +46,7 @@ ontheater(){
     title:this.theaterform.value.title,
     theater:this.theaterform.value.theater,
     location:this.locationform.value.location,
-    image:this.theaterform.value.image,
+    
   }
   this.adminservice.addtheater(details).subscribe({next:(res:any)=>{
     if(res && res['status']=='ok'){

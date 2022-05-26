@@ -79,3 +79,12 @@ td{
     display: inline-flex;
 
 }
+@media (max-width:800px)
+  {
+    .container-fluid
+    {
+      height: 1300px;
+      }
+ 
+
+  }

@@ -1,4 +1,4 @@
-import { isNgTemplate } from '@angular/compiler';
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BookingService } from 'src/app/Services/booking.service';
@@ -32,6 +32,12 @@ export class ReservationComponent implements OnInit {
       email:localStorage.getItem('email'),
       name:localStorage.getItem('name')
     }
+    this.bookingservice.updatereservation(localStorage.getItem('reservationid'),details).subscribe({next:(res:any)=>{
+      if(res && res['status']=='ok'){
+        console.log(res)
+      }else{
+        console.log("ERROR OCCURED in update")
+      }
     
     this.bookingservice.getreservationdetails(localStorage.getItem('reservationid')).subscribe({next:(res:any)=>{
       console.log(res)
@@ -48,7 +54,8 @@ export class ReservationComponent implements OnInit {
       this.name=item.name
       }
     }})
+    }})
   }
 }
-
+  
 

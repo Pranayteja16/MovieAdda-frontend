@@ -15,14 +15,13 @@
     <div>
         <label for="movie">Movie:</label>
         <select id="movie"  formControlName="title"  class="inp">
-            <option disabled>Select Movie</option>
+            <option disabled>Select Movie</option>  
             <option *ngFor="let item of movies_list">{{item}}</option>
             </select><br>
             <label for="theater">Theater:</label>
             <input  type="text" formControlName="theater" placeholder="Enter Theater" name="theater" required>
             <span class="validation" *ngIf="theater && theater .invalid && theater .touched">Enter a valid Location</span><br>
-            <!-- <label for="image">Image address:</label>
-            <input  type="text" formControlName="image" placeholder="Enter Image Address" name="image"><br> -->
+            
             <button class="button" [disabled]="theaterform.invalid" type="submit" (click)="ontheater()">Select</button> 
     </div>
 </form>

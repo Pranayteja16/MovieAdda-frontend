@@ -1,4 +1,4 @@
-
+<!-- 
   <nav>
   <div class ="logo">
   
@@ -6,14 +6,12 @@
   </div>
   <ul class="nav-links">
     <li mat-button *ngIf="apiservice.loggedin && apiservice.admin"><a routerLink="adminhome">Home</a></li>
-    <!-- <a mat-button *ngIf="apiservice.loggedin && apiservice.admin" routerLink="users">Users</a> -->
     <li mat-button *ngIf="apiservice.loggedin && apiservice.admin"><a routerLink="addlocation">Location</a></li>
     <li mat-button *ngIf="apiservice.loggedin && apiservice.admin" ><a routerLink="addmovie">Movie</a></li>
     <li mat-button *ngIf="apiservice.loggedin && apiservice.admin" ><a routerLink="addtheater">Theater</a></li>
     <li mat-button *ngIf="apiservice.loggedin && apiservice.admin" ><a routerLink="addshowtime">Showtime</a></li>
     <li mat-button *ngIf="apiservice.loggedin && apiservice.admin"><a routerLink="allbookings">Bookings</a></li>
-    <!-- <a mat-button *ngIf="apiservice.loggedin && apiservice.admin" routerLink="adminlocation">Book Tickets</a>
-    <a mat-button *ngIf="apiservice.loggedin && apiservice.admin" routerLink="adminmybookings">My Bookings</a> -->
+
     
     <li mat-button *ngIf="apiservice.loggedin && !apiservice.admin" ><a routerLink="home">Home</a></li>
     <li mat-button *ngIf="apiservice.loggedin && !apiservice.admin"><a routerLink="location">Book Tickets</a></li>
@@ -24,6 +22,42 @@
   </ul>
 
 
-  </nav>
+  </nav> -->
+
+  <html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>MovieAdda</title>
+</head>
+<body>
+    <header>
+        <figure class="brand">MovieAdda</figure>
+        <nav class="menu">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
+            <ul>
+
+               
+    <a mat-button *ngIf="apiservice.loggedin && apiservice.admin" routerLink="adminhome">Home</a>
+    <a mat-button *ngIf="apiservice.loggedin && apiservice.admin" routerLink="addlocation">Location</a>
+    <a mat-button *ngIf="apiservice.loggedin && apiservice.admin"  routerLink="addmovie">Movie</a>
+    <a mat-button *ngIf="apiservice.loggedin && apiservice.admin"  routerLink="addtheater">Theater</a>
+    <a mat-button *ngIf="apiservice.loggedin && apiservice.admin"  routerLink="addshowtime">Showtime</a>
+    <a mat-button *ngIf="apiservice.loggedin && apiservice.admin"  routerLink="allbookings">Bookings</a>
+
+    
+    <a mat-button *ngIf="apiservice.loggedin && !apiservice.admin"  routerLink="home">Home</a>
+    <a mat-button *ngIf="apiservice.loggedin && !apiservice.admin"  routerLink="location">Book Tickets</a>
+    <a mat-button *ngIf="apiservice.loggedin && !apiservice.admin"  routerLink="bookings">My Bookings</a>
+    <a mat-button *ngIf="!apiservice.loggedin"  routerLink="login">Login</a>
+    <a mat-button *ngIf="!apiservice.loggedin"  class="signup" routerLink="signup">Signup</a>
+    <a mat-button *ngIf="apiservice.loggedin"  class="Logout"(click)="apiservice.userlogout()">Logout</a>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
 
 <router-outlet></router-outlet>

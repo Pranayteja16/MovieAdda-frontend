@@ -64,7 +64,6 @@ export class SeatlayoutComponent implements OnInit {
     this.bookingservice.bookseats(seatdetails).subscribe({next:(res:any)=>{
       console.log(res)
       localStorage.setItem('reservationid', res['data']['_id'])
-      // this.bookingservice.setreservationid(res['data']['_id'])
       console.log(this.bookingservice.getreservationid())
       this.router.navigate(['/reservation'])
     },error:(err)=>{
@@ -90,7 +89,7 @@ export class SeatlayoutComponent implements OnInit {
   })
   this.rowname=['A','B','C','D','E']
   this.rows=[0,1,2,3,4]
-  this.cols=[0,1,2,3,4]
+  this.cols=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 
 }
 

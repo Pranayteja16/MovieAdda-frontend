@@ -17,51 +17,53 @@ export class BookingService {
   constructor(public http : HttpClient) { }
 
 getalllocations(){
-    return this.http.get('http://localhost:9000/location/alllocations')
+    return this.http.get('http://65.0.55.230:9000/location/alllocations')
   }
 searchlocation(userdata:any){
-  return this.http.post('http://localhost:9000/location/searchlocation' , userdata)
+  return this.http.post('http://65.0.55.230:9000/location/searchlocation' , userdata)
 }
-
+updatereservation(id:any,userdata:any){
+  return this.http.put('http://65.0.55.230:9000/reservation/updatereservationdetails/'+ id, userdata)
+}
 searchmovie(userdata:any){
-  return this.http.post('http://localhost:9000/movie/searchmovie', userdata)
+  return this.http.post('http://65.0.55.230:9000/movie/searchmovie', userdata)
 }
 getmoviebyimage(image:any){
-  return this.http.post('http://localhost:9000/movie/getmoviebyimage', image)
+  return this.http.post('http://65.0.55.230:9000/movie/getmoviebyimage', image)
 }
 
 getmovies(location:any){
-  return this.http.get('http://localhost:9000/movie/getmovie/'+location)
+  return this.http.get('http://65.0.55.230:9000/movie/getmovie/'+location)
 }
 
 searchtheater(userdata:any){
-  return this.http.post('http://localhost:9000/theater/searchtheater' , userdata)
+  return this.http.post('http://65.0.55.230:9000/theater/searchtheater' , userdata)
 }
 
 gettheaters(movie:any, location:any){
-  return this.http.get('http://localhost:9000/theater/gettheater/'+ movie+'/'+location)
+  return this.http.get('http://65.0.55.230:9000/theater/gettheater/'+ movie+'/'+location)
 }
 
 getshows(the:any , mov:any , loc:any){
-  return this.http.get('http://localhost:9000/showtime/getshowtime/'+mov+'/'+the+'/'+loc)
+  return this.http.get('http://65.0.55.230:9000/showtime/getshowtime/'+mov+'/'+the+'/'+loc)
 }
 getshow(mov:any, the:any ,loc:any, show:any){
-  return this.http.get('http://localhost:9000/showtime/getshowtiming/'+mov+'/'+the+'/'+loc+'/'+show)
+  return this.http.get('http://65.0.55.230:9000/showtime/getshowtiming/'+mov+'/'+the+'/'+loc+'/'+show)
 }
 getshowbyid(id:any){
-  return this.http.get('http://localhost:9000/showtime/getshow/'+id)
+  return this.http.get('http://65.0.55.230:9000/showtime/getshow/'+id)
 }
 searchshow(userdata:any){
-  return this.http.post('http://localhost:9000/showtime/searchshowtime' , userdata)
+  return this.http.post('http://65.0.55.230:9000/showtime/searchshowtime' , userdata)
 }
 bookseats(userdata:any){
-  return this.http.post('http://localhost:9000/showtime/bookseats' , userdata)
+  return this.http.post('http://65.0.55.230:9000/showtime/bookseats' , userdata)
 }
 getreservationdetails(id:any){
-  return this.http.get('http://localhost:9000/reservation/getreservationdetails/'+ id)
+  return this.http.get('http://65.0.55.230:9000/reservation/getreservationdetails/'+ id)
 }
 getreservations(email:any){
-  return this.http.get('http://localhost:9000/reservation/getreservationbyemail/'+ email)
+  return this.http.get('http://65.0.55.230:9000/reservation/getreservationbyemail/'+ email)
 }
 
 

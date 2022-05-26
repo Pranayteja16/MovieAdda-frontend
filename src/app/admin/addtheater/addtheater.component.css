@@ -53,17 +53,7 @@ select{
     border: none;
     top:-30px;
 }
-/* .button{
-    position: relative;
-    padding:5px;
-    top: 10px;
-    height:25px;
-    width: 70px;
-    left: 30px;
-    border-radius: 5px;
-    outline: none;
-    top:-25px;
-} */
+
 .button{
     cursor: pointer;
     width: 30%;
@@ -130,7 +120,8 @@ input.ng-invalid.ng-touched{
 .row{
   position: relative;
   top:400px;
-  /* left:200px; */
+  left:100px;
+ 
 }
  td{
    width: 350px;
